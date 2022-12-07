@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compress-page404": "sass --watch my_sections/static/my_sections/src/scss/page-404/style.scss my_sections/static/my_sections/src/css/style-page404.css --style compressed",
+    "bootstrap-compress": "sass --watch global_static/bootstrap/scss/bootstrap.scss global_static/bootstrap/css/bootstrap.css --style compressed",
+    "my_sections-compress": "sass --watch my_sections/static/my_sections/src/scss/app.scss my_sections/static/my_sections/src/css/style.compress.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+  }
+}

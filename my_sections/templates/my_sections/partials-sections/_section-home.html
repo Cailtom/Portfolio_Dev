@@ -1,0 +1,25 @@
+{% load static %}
+
+<header>
+    <h3 class="home">
+        Olá, Sou o Cailton<span class="default_theme">&#95;</span>
+    </h3>
+
+    <p class="description">
+        <br><span class="commint_style" aria-label="Anotaçõesso">//Anotações.txt</span>
+
+        {% for notes in home %}
+            <br><span class="style_span">- {{ notes.category }}:</span> {{ notes.intro_description }}
+        {% endfor %}
+    </p>
+
+    <div class="btn-home-style">
+        <a class="btn btn-cv rounded-0" 
+            download="CV-CailtonOliveira.pdf"
+            href="{% static 'cv/CV-CailtonOliveira.pdf' %}">
+
+            BAIXAR_CV
+        </a>
+    </div>
+</header>
+

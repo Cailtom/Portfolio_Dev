@@ -1,0 +1,63 @@
+{% load static %}
+
+<div class="container-fluid more-style">
+
+  <div class="row">
+    <div class="col-img col-12 col-sm-9 col-xl-6 order-1 order-md-2">
+      <section class="style__card" data-aos="fade-up">
+        <header class="title__style">
+          <h2 data-aos="zoom-in" class="more">
+            <span class="default_theme">&#60;</span>
+            Habilidades
+            <span class="default_theme">&#47;&#62;</span>
+          </h2>
+        </header>
+
+        <div class="countStyle__card">
+          <h3 data-aos="zoom-in" translate="no">
+              002
+          </h3>
+        </div>
+
+        <video autoplay 
+          loop 
+          muted 
+          playsinline 
+          class="img-fluid" 
+          style="opacity: 0.6;"
+          data-aos="zoom-in"
+          width="659"
+          height="371.17">
+
+          <source src="{% static 'my_sections/src/images/card-skills.webm' %}" type="video/webm">
+          <source src="{% static 'my_sections/src/images/card-skills.mp4' %}" type="video/mp4">
+          
+        </video>
+      </section>
+    </div>
+
+    <section class="descripition__card col-12 col-sm-11 col-xl-6 order-2 order-md-1">
+      <h2 class="title_more">
+        <span class="default_theme">#</span>
+        Minhas Habilidades
+        <span class="default_theme_style"></span>
+      </h2>
+
+      {% for text in skills %}
+      <p>
+        <span class="simbol_terminal default_theme" translate="no">></span>
+        <span class="tag_span">
+          {{ text.tag_span }}
+        </span>
+
+        &#123;{{ text.skills_description }}&#125;	
+      </p>
+      {% endfor %}
+
+      <p>
+        <span class="simbol_terminal default_theme" translate="no">></span>
+        <span class="teminal__animated" translate="no">_</span>
+      </p>
+    </section>
+  </div>
+</div>

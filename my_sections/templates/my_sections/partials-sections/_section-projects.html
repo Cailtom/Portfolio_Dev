@@ -1,0 +1,60 @@
+{% load static %}
+
+<div class="container-fluid">
+  <div class="row">
+
+    <article class="scrollcards-container">
+      <header class="title_projects">
+        <h2>
+          <span class="default_theme">&#60;</span>
+          Meus Projetos
+          <span class="default_theme">&#47;&#62;</span>
+        </h2>
+
+        <div class="btn_filter_style">
+          <button class="btn btn_reset active" onclick="resetFilter()"> Padrão </button>
+          <button class="btn btn_Front-End " onclick="filterFrontEnd()"> Front-End</button>
+          <button class="btn btn_Back-End " onclick="filterBackEnd()"> Back-End</button>
+          <button class="btn btn_FullStack " onclick="filterFullStack()"> Full-Stack</button>
+        </div>
+      </header>
+
+      <div class="scrollcards-style dragscroll">
+        {% for card in projects %}
+        <div class="card" data-filter="{{ card.tag }}">
+          <div class="tags">
+            <span>{{ card.tag }}</span>
+          </div>
+
+          <figure>
+            <img class="img-fluid" width="350" height="197" src="{{ card.image_project }}" alt="{{ card.alt_image }}">
+          </figure>
+
+          <section class="contents_card">
+            <h2>
+              {{ card.title }}
+            </h2>
+
+            <p>{{ card.description_project }}</p>
+            <p><span>Tecnologias: </span>{{ card.skills }}</p>
+
+            <div class="btns">
+              <a href="{{ card.link_previw }}" class="btn btn-preview btn-sm" target="_blank">
+
+                Ver_Site<span>.()</span>
+              </a>
+
+              <a href="{{ card.link_github }}" target="_blank" class="btn btn-github btn-sm">
+
+                GitHub<span>.()</span>
+              </a>
+            </div>
+          </section>
+
+        </div>
+        {% endfor %}
+      </div>
+    </article>
+
+  </div>
+</div>

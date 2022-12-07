@@ -1,0 +1,52 @@
+.navbar {
+    display: none;
+    background-color: #00000000 !important;
+    z-index: 990 !important;
+    backdrop-filter: blur(4px);
+}
+
+div#google_translate_element.nav-link {
+    padding: 0 !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: #00da00 !important;
+    border: none !important;
+    padding: 5px !important;
+    border-radius: 0 !important;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+}
+
+.goog-te-menu-value span:nth-child(3) {
+    border: none !important;
+}
+
+.goog-te-menu-value span:nth-child(5),
+.goog-te-gadget-icon,
+.goog-tooltip,
+.goog-tooltip:hover,
+#goog-gt-tt,
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 667px) {
+
+    #google_translate_element,
+    .skiptranslate {
+        goog-te-gadget {
+            width: 100% !important;
+        }
+    }
+}

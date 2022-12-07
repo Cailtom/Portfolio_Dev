@@ -1,0 +1,107 @@
+#services {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://64.media.tumblr.com/87a82b012d366a837c82361cc4bb35ac/tumblr_pal4j5uMXB1rnbw6mo1_1280.gif');
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: contain;
+        opacity: 0.4;
+    }
+
+    .row {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+
+        section {
+            z-index: 1;
+
+            .services_title {
+                font-size: 2.3rem;
+                font-family: 'Bangers', 'RocknRoll One', sans-serif;
+            }
+
+            .services_title,
+            .description-services {
+                text-align: center;
+            }
+
+            .description-services {
+                color: #00ff00;
+                font-family: 'Anton', 'RocknRoll One', cursive;
+                ;
+                letter-spacing: 1px;
+                font-style: italic;
+                font-size: 1rem;
+            }
+
+            .main-services {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-start;
+                width: 100%;
+                overflow: auto;
+                flex-direction: row;
+
+                .flex-item {
+                    color: #fff;
+                    width: 300px;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 3px;
+                    padding: 10px 20px;
+                    background-color: #021e35;
+
+                    h2 {
+                        color: #fff;
+                        font-family: 'Teko', 'RocknRoll One', sans-serif;
+                        font-size: 1.5rem;
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+
+                        span {
+                            font-size: 1rem;
+                            color: #00ff00;
+                            font-weight: 600;
+                            text-transform: none;
+                        }
+                    }
+
+                    p {
+                        padding: 0;
+                        margin: 10px 0;
+                        hyphens: auto;
+                        -webkit-hyphens: auto;
+                        -moz-hyphens: auto;
+                        -ms-hyphens: auto;
+                    }
+
+                    .line {
+                        content: ' ';
+                        width: 50%;
+                        margin: 0 !important;
+                        margin-bottom: 15px;
+                        height: 3px;
+                        background-color: #00ff00;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 785.98px) {
+    #services::before {
+        background-position: center right -50px;
+    }
+}

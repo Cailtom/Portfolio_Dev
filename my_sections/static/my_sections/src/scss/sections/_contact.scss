@@ -1,0 +1,131 @@
+@use "../variables/variable.scss";
+
+#contact {
+    padding: 50px 0;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, #0A0F18 2%, rgba(0, 0, 0, 0.226)), url('https://gifs.eco.br/wp-content/uploads/2022/06/gifs-de-anime-lofi-9.gif');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        color: variable.$text-black-70;
+        background-color: transparent;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        box-shadow: 25px 25px 70px variable.$bg-dark, -25px -25px 70px variable.$bg-dark;
+
+
+        .card-contact {
+            .img_form {
+                margin: 0;
+                position: relative;
+                background-color: variable.$bg-dark;
+
+                img {
+                    opacity: 0.8;
+                    min-height: 100%;
+                }
+
+                .title_ltr {
+                    top: 37%;
+                    text-shadow: 5px 5px 20px variable.$bg-dark;
+                    left: 0;
+                    position: absolute;
+                    color: variable.$text-white;
+                    text-transform: uppercase;
+                    font-family: 'Bangers', 'RocknRoll One', sans-serif;
+                    writing-mode: vertical-rl;
+
+                    .style_span {
+                        position: absolute;
+                        width: 5px;
+                        height: 20px;
+                        top: -28px;
+                        left: 10px;
+                        background-color: #fffffff1;
+                    }
+                }
+            }
+        }
+
+        .card-body_container {
+            background-color: variable.$text-white;
+
+            .card-body {
+                padding: 20px;
+
+                .card-title {
+                    font-size: 1.5em;
+                    color: #050505f5;
+                    text-transform: uppercase;
+                    font-family: 'Bangers', 'RocknRoll One', sans-serif;
+                }
+
+                .card-title,
+                label {
+                    margin-bottom: 4px;
+                }
+
+                label {
+                    font-size: 1em;
+                }
+
+                input {
+                    border-left: 0;
+                    border-right: 0;
+                    border-top: 0;
+                }
+
+                input,
+                textarea {
+                    padding: 0px;
+                    resize: none;
+                    width: 100%;
+                }
+
+                #form-status {
+                    margin: 0 !important;
+                }
+
+                input,
+                textarea,
+                button {
+                    border-radius: 0px;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    -o-border-radius: 0px;
+                }
+
+                button {
+                    float: right;
+                    border: none;
+                    background-color: transparent !important;
+
+                    &:hover {
+                        background-color: transparent !important;
+                        color: #333;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    button {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

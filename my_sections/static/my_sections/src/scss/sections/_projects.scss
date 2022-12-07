@@ -1,0 +1,167 @@
+#projects {
+    .row {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+        .scrollcards-container {
+            z-index: 10;
+
+            .title_projects {
+                text-align: center;
+                position: relative;
+                margin-bottom: 0;
+
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    font-family: 'Bangers', sans-serif;
+                    text-transform: uppercase;
+                }
+
+                h2 {
+                    margin: 0;
+                }
+
+                .btn_filter_style {
+                    margin-top: 10px;
+
+                    .btn_reset,
+                    .btn_Front-End,
+                    .btn_Back-End,
+                    .btn_FullStack {
+                        border-radius: 0;
+                        -webkit-border-radius: 0;
+                        -moz-border-radius: 0;
+                        -ms-border-radius: 0;
+                        -o-border-radius: 0;
+                        color: #00ff00;
+                        font-weight: 500;
+                        font-style: italic;
+                        border: 0;
+                        padding: 0 8px;
+
+                        &.active {
+                            color: #fefefe;
+                            border-bottom: 1px solid #b4b4b4;
+                        }
+                    }
+                }
+            }
+
+            .scrollcards-style {
+                overflow: auto;
+                white-space: nowrap;
+                overflow-y: scroll;
+
+
+                .card {
+                    margin: 10px 4px;
+                    transition: .6s ease;
+                    display: inline-block;
+                    text-decoration: none;
+                    height: auto;
+                    width: 350px;
+                    background-color: transparent;
+                    cursor: ew-resize;
+                    position: relative;
+
+                    .tags {
+                        z-index: 10;
+                        position: absolute;
+                        top: 5px;
+                        left: 0;
+                        display: flex;
+
+                        span {
+                            background-color: #00060f;
+                            color: #fefefe;
+                            font-weight: 900;
+                            font-size: 0.7rem;
+                            padding: 2px 5px;
+                            font-style: italic;
+                            border-radius: 5px;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    &:hover {
+                        figure {
+                            img {
+                                filter: brightness(100%);
+                            }
+                        }
+                    }
+
+                    figure {
+                        z-index: -1;
+
+                        img {
+                            transition: .6s ease;
+                            filter: brightness(80%);
+                        }
+                    }
+
+                    .contents_card {
+                        max-width: 100%;
+                        z-index: 10;
+                        margin-top: -19px;
+                        background: #021e35;
+                        text-align: center;
+                        border: 2px dashed #FCF8EC;
+                        color: #fefefe;
+                        padding: 25px;
+
+                        h2 {
+                            font-size: 1.2em;
+                            font-weight: 400;
+                            font-family: 'Bangers', 'RocknRoll One', sans-serif;
+                            margin-bottom: 15px;
+                        }
+
+                        h2,
+                        a {
+                            text-transform: uppercase;
+                        }
+
+                        h2,
+                        p {
+                            // Max text view
+                            max-width: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        p {
+                            text-align: left;
+                            padding: 0;
+                            margin: 0;
+
+                            span {
+                                color: #00ff00;
+                            }
+                        }
+
+                        .btns {
+                            margin-top: 16px;
+                            display: flex;
+                            justify-content: space-around;
+
+                            .btn-preview,
+                            .btn-github {
+                                border-radius: 0;
+                                color: #fefefe;
+                                font-weight: 600;
+
+                                &:hover {
+                                    color: #b4b4b4;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

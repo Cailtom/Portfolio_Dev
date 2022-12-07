@@ -1,0 +1,45 @@
+*.py[cod]
+*$py.class
+package-lock.json
+staticfiles
+__pycache__
+.env
+migrations
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.mypy_cache
+.virtualenv/
+
+# Scrapy stuff:
+.scrapy
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Environments
+.env
+.venv
+node_modules/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.idea/.gitignore
+.idea/dictionaries
+.idea/misc.xml
+.idea/modules.xml
+.idea/Portfolio.iml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml

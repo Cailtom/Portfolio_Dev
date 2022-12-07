@@ -1,0 +1,182 @@
+@use '../variables/variable.scss';
+@use '../mixins/mixin.scss';
+@import "../fonts/font.scss";
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1px;
+    user-select: none;
+
+    border: none;
+    box-shadow: none !important;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family:'Teko', 'RocknRoll One', sans-serif;
+    background-color: variable.$color-bg;
+    color: variable.$color-text;
+
+    // necessary for the purpose of charging
+    overflow: hidden;
+}
+
+button.navbar-toggler.d-lg-none.border-0:focus {
+    box-shadow: none;
+    border: 0;
+}
+
+.bi.bi-three-dots-vertical {
+    font-style: normal !important;
+}
+
+.i-social {
+    font-family: 'Icons';
+    font-style: normal;
+}
+
+.btnToTop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 999 !important;
+
+    .btn-top {
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        color: #FFF8F0;
+        padding: 0;
+        font-size: 2rem;
+        font-family: 'Anton', 'RocknRoll One', cursive;
+
+        &:hover {
+            border: none;
+            margin: 0;
+        }
+    }
+}
+
+.default_theme_style {
+    content: '';
+    width: 4em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    margin-left: 15px;
+    background-color: #00ff00;
+}
+
+// Effect - Scroll Div
+.panel {
+    position: static;
+    top: 0;
+    height: 100vh;
+    @include mixin.pixelated-effect-bg;
+}
+
+// Loarding Effect
+.loader {
+    @include mixin.pixelated-effect-bg;
+    @include mixin.position-center-column;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: variable.$color-bg;
+    z-index: 999 !important;
+
+    .lds-ripple {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+
+        div {
+            position: absolute;
+            border: 4px solid variable.$color-text;
+            opacity: 1;
+            border-radius: 50%;
+            animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+
+        div:nth-child(2) {
+            animation-delay: -0.5s;
+        }
+    }
+}
+
+// Progress Bar
+progress {
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    left: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    border: none;
+    background: transparent;
+
+    &::-webkit-progress-bar {
+        background: transparent;
+    }
+
+    &::-webkit-progress-value {
+        background: variable.$color-progress-Bar;
+        background-attachment: fixed;
+    }
+
+    &::-moz-progress-bar {
+        background: variable.$color-progress-Bar;
+        background-attachment: fixed;
+    }
+}
+
+// Themes
+.default_theme {
+    font-family: 'Anton' !important;
+}
+.default_theme,
+.default_theme_navbar {
+    color: variable.$span-theme-default;
+    font-weight: 800;
+}
+
+.btn_github,
+.btn_linkedin {
+    background-color: #FFF8F0;
+    position: fixed;
+    border: none;
+    z-index: 559 !important;
+    color: rgb(27, 27, 27);
+    padding: 5px;
+    right: 0;
+    text-decoration: none;
+    
+    &:hover {
+        color: rgb(27, 27, 27);
+    }
+}
+
+.btn_github {
+    top: 45%;
+}
+
+.btn_linkedin {
+    top: 55%;
+}
+
+footer {
+    background-color: #00ff00;
+    color: #000;
+}
