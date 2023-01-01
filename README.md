@@ -51,5 +51,4 @@ Qual Banco de Dados utilizados? PostgreSQL
 
     
 ## 👾 Feedback
-
 Se você tiver algum feedback, por favor nos deixe saber por meio de: cailtonoliveiracosta@gmail.com
